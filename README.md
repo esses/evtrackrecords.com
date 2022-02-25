@@ -1,14 +1,15 @@
-# evtrackrecords.com
+# EV Track Records
 
 ---
 
-The web repository for [evtrackrecords.com](https://evtrackrecords.com). EV Track Records exists as inspiration for people to push themselves to faster lap times and to celebrate and recognize the hard work and skill of builders and drivers everywhere.
+The web repository for [evtrackrecords.com](https://evtrackrecords.com). **EV Track Records** exists as inspiration for people to push themselves to faster lap times and to celebrate and recognize the hard work and skill of builders and drivers everywhere.
 
 ## Submitting a Lap
 
 1. The most efficient way to submit a track record is through this [Google form](https://forms.gle/sTfyUc7Ubnn4XPyM6).
 2. For internet points you can also submit via the Facebook group [EV Track Records](https://www.facebook.com/groups/1635756253489735). See the info requirements below to submit with your post.
 3. If neither of those work for you or if your track record is not getting posted to the site fast enough for your liking, please email me at [steven@emotive.engineering](mailto:steven@emotive.engineering).
+4. Ok, true nerd friend. Submit a pull request.
 
 ## Data Requirements
 
@@ -41,7 +42,7 @@ Photo Link:*
 
 ## Motivations
 
-One of the first things I used to do when I went to learn a new track is look for the Spec Miata track record and the accompanying video. Most often in my area this lap was set by Mark Drennan and I knew I could not set this time in my Miata, but maybe I could do so in a car with more horsepower. Then came along the Miata Track Records page.
+One of the first things I used to do when I went to learn a new track is look for the Spec Miata track record and the accompanying video. Most often in my area this lap was set by Mark Drennan and I knew I could not set this time in my Miata, but maybe I could do so in a car with more horsepower. Then came along the [Miata Track Records](https://www.facebook.com/groups/miatatrackrecords/) page.
 
 Now that I have a Tesla, I want the same resource for EVs and would love to build a list of who is who in the community. What times are the local hotshoes running in their Model 3 Performance? And as more and more EVs come to market, will they be able to best the Model 3 Performance?
 
