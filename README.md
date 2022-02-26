@@ -32,6 +32,7 @@ Competition Class:*
   - Time Attack Class when set, if applicable. ex: Enthusiast, SLB 2021
 Instagram Username:*
 Photo Link:*
+Build Thread or Mod List:*
 ```
 
 ## Submission Rules
@@ -46,7 +47,9 @@ One of the first things I used to do when I went to learn a new track is look fo
 
 Now that I have a Tesla, I want the same resource for EVs and would love to build a list of who is who in the community. What times are the local hotshoes running in their Model 3 Performance? And as more and more EVs come to market, will they be able to best the Model 3 Performance?
 
-### Acknowledgements
+### Acknowledgements / Colophon
 
 - Thank you, [Render](https://render.com/) for the free hosting.
 - Thank you, Google for the [free database](https://docs.google.com/spreadsheets/d/1eWu3GgVJO_mWu6g1xuEgTjM4p1x4gUh5rznC157VISA/edit?usp=sharing).
+- Rendered with [eleventy](https://www.11ty.dev/).
+- Styled by [TailwindCSS](https://tailwindcss.com/).

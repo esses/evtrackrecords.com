@@ -1,0 +1,4 @@
+Sitemap: https://evtrackrecords.com/sitemap.xml
+
+User-agent: *
+Disallow:
