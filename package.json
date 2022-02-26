@@ -6,7 +6,7 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "tailwind": "npx tailwindcss -i ./src/css/evtr.css -o ./public/css/evtr.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/css/evtr.css -o ./public/css/evtr.css --minify --watch"
   },
   "repository": {
     "type": "git",
