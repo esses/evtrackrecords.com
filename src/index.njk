@@ -24,10 +24,18 @@ layout: default.njk
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td>
+                    {% for lap, val in tracks.cota %}
+                      {{ val.Driver }}
+                    {% endfor %}
+                   </td>
+                </tr>
+                {% for lap in cota %}
                 <!-- Odd Row: bg-white, Even Row: bg-gray-50 -->
                 <tr class="bg-white">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Dai Yoshihara</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">2:23.838</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ lap.driver }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ lap.lap_time }}</td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">2/20/22</td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" title="Evasive Pikes Peak HHIC Car">Tesla Model 3 Performance</td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">(?) Advan A005 / 18x11 Titan7 T-P5</td>
@@ -50,6 +58,7 @@ layout: default.njk
                     </a>
                   </td>
                 </tr>
+                {% endfor %}
                 <tr class="bg-gray-50">
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>

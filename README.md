@@ -20,11 +20,11 @@ Driver:
 Track and Configuration:
 Lap Time:
 Date:
-Make, Model, and Trim: 
+Year*, Make, Model, and Trim: 
 Car Name:* 
   - Does your car have a cool name or is it a shop car?
 Tire and Wheel Combo: 
-  - example: 295/35R18 Yokohama Advan A052 / Aspira AF-10 18x10.5
+  - example: 295/35R18 Yokohama Advan A052 / Aspira AF-10 18x10.5 +30
 Data Link:
   - Timing and scoring sheets from event organizers are great. All times should be acquired by transponder or GPS data. Mobile apps are acceptable. Just need you to reputably prove it. Please include how time was acquired.
 Video Link:*
