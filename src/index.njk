@@ -16,59 +16,57 @@ layout: default.njk
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Tires / Wheels</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">AKA</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>    
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Comp Class</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Event</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    {% for lap, val in tracks.cota %}
-                      {{ val.Driver }}
-                    {% endfor %}
-                   </td>
-                </tr>
-                {% for lap in cota %}
-                <!-- Odd Row: bg-white, Even Row: bg-gray-50 -->
-                <tr class="bg-white">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ lap.driver }}</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ lap.lap_time }}</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">2/20/22</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" title="Evasive Pikes Peak HHIC Car">Tesla Model 3 Performance</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">(?) Advan A005 / 18x11 Titan7 T-P5</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    <a href="https://racehero.io/events/super-lap-battle-usa-2022-cota/results/536870943#show:detailed-info-overall-88">
+                {% for lap, val in tracks.cota %}
+                <tr>{% lapEntry val %}</tr>
+                  {# embedded in lapEntry Nunjucks Short Code
+                    {% if val.InstagramUsername %}
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"><a href="https://instagram.com/{{ val.InstagramUsername }}">{{ val.Driver }}</a></td>
+                  {% else %}
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ val.Driver }}</td>
+                  {% endif %}
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">{{ val.LapTime }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">{{ val.Date }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">{{ val.Vehicle }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">{{ val.CarName }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">
+                    {% if val.LapData %}
+                    <a href="{{ val.LapData }}">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
                         <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
                         <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
                       </svg>
                     </a>
+                    {% endif %}
                   </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">SLB 2022</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    <a href="https://www.youtube.com/watch?v=Lk6eO9nwQDU">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">
+                    {% if val.LapVideo %}
+                    <a href="{{ val.LapVideo }}">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
                       </svg>
                     </a>
+                    {% endif %}
                   </td>
-                </tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">{{ val.CompClass }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">
+                    {% if val.LapData %}
+                    <a href="{{ val.Modifications }}">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                      </svg>                    
+                    </a>
+                    {% endif %}
+                  </td> #}
                 {% endfor %}
-                <tr class="bg-gray-50">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -89,81 +87,17 @@ layout: default.njk
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Tires / Wheels</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>  
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>               
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Comp Class</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">AKA</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>    
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Event</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
                 </tr>
               </thead>
               <tbody>
-                <!-- Odd Row: bg-white, Even Row: bg-gray-50 -->
-                <tr class="bg-white">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Randy Pobst</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">1:28.213</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">08/01/21</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" title="Unplugged Performance Dark Helmet">2021 Tesla Model S Plaid</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Yokohama A005 / 19x? Unplugged UP-03</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    <a href="https://racehero.io/events/sv-laguna-seca-01-aug-21/results/1073753734#show:detailed-info-overall-D32aef5a0">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
-                        <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
-                        <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
-                      </svg>
-                    </a>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    <a href="https://www.youtube.com/watch?v=iGH6GlEj0jo">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                      </svg>
-                    </a>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Tesla Corsa 16</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    <a href="https://unpluggedperformance.com/featured-vehicles/unplugged-performance-tesla-model-s-plaid-pikes-peak-race-car/">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>                
-                <tr class="bg-gray-50">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Kevin Mitz</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">1:32.046</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">07/01/12</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Kleenspeed EV-X11</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">(?) Goodyear Slicks</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    <a href="http://www.refuelraces.com/sportelectrictt2012.php">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
-                        <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
-                        <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
-                      </svg>
-                    </a>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">ReFuel 2012</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    <a href="https://www.topspeed.com/cars/kleenspeed-technologies/2011-kleenspeed-ev-x11-ar119302.html">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>
-                <tr class="bg-white">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
-                </tr>
+                {% for lap, val in tracks.laguna_seca %}
+                <tr>{% lapEntry val %}</tr>
+                {% endfor %}               
               </tbody>
             </table>
           </div>
