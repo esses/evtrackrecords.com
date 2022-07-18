@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="/css/evtr.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XM5JNFMTN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1XM5JNFMTN');
+    </script>
+  </head>
+  <body class="bg-zinc-50">
+    {% include 'header.njk' %}
+    <main class="container mx-auto sm:px-6 lg:px-8">
+      <div class="relative mb-20 overflow-hidden">
+        <div class="relative px-4 sm:px-6 lg:px-8">
+          <div class="prose mx-auto">
+            <h1 class="mb-0">
+              <span class="block prose text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:border-b lg:border-yellow-500 py-5">{{ title }}</span>
+            </h1>
+          </div>
+          <div class="mt-6 prose prose-yellow text-base text-gray-800 mx-auto">
+            {{ content | safe }}
+          </div>
+        </div>
+      </div>
+    </main>
+    {% include 'footer.njk' %}
+  </body>  
+</html>

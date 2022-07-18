@@ -3,6 +3,7 @@ const yaml = require("js-yaml");
 module.exports = function(eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
   eleventyConfig.addPassthroughCopy("./src/*.ico");
+  eleventyConfig.addPassthroughCopy("./src/*.png");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   // JSON to Lap Time Entry
   eleventyConfig.addNunjucksShortcode("lapEntry", function(lap) {
@@ -45,7 +46,8 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "public"
+      layouts: "_layouts",
+      output: "public",
     }
   }
 }
