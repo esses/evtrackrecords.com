@@ -2,6 +2,7 @@ const yaml = require("js-yaml");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+  eleventyConfig.addPassthroughCopy("./src/*.ico");
   // JSON to Lap Time Entry
   eleventyConfig.addNunjucksShortcode("lapEntry", function(lap) {
     let driverString, lapCarName, lapDataLink, lapVideoLink, modificationsLink;

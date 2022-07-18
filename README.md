@@ -43,7 +43,7 @@ Build Thread or Mod List:*
 
 ## Motivations
 
-One of the first things I used to do when I went to learn a new track is look for the Spec Miata track record and the accompanying video. Most often in my area this lap was set by Mark Drennan and I knew I could not set this time in my Miata, but maybe I could do so in a car with more horsepower. Then came along the [Miata Track Records](https://www.facebook.com/groups/miatatrackrecords/) page.
+One of the first things I used to do when I went to learn a new track is look for the Spec Miata track record and the accompanying video. Most often in my neck of the woods this lap was set by Mark Drennan and I knew I could not set this time in my Miata, but maybe I could do so in a car with more horsepower. Then came along the [Miata Track Records](https://www.facebook.com/groups/miatatrackrecords/) page.
 
 Now that I have a Tesla, I want the same resource for EVs and would love to build a list of who is who in the community. What times are the local hotshoes running in their Model 3 Performance? And as more and more EVs come to market, will they be able to best the Model 3 Performance?
 
