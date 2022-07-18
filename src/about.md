@@ -24,14 +24,14 @@ title: About
 
 Please include the following data. Those marked with * are optional.
 
-- Driver: 
+- Driver:
 - Track and Configuration:
 - Lap Time:
 - Date:
-- Year, Make, Model, and Trim: 
-- Car Name:* 
+- Year, Make, Model, and Trim:
+- Car Name:*
     - Does your car have a cool name or is it perhaps a shop car?
-- Tire and Wheel Combo: 
+- Tire and Wheel Combo:
     - example: 295/35R18 Yokohama Advan A052 / Aspira AF-10 18x10.5 +30
 - Data Link:
     - Timing and scoring sheets from event organizers are perfect. All times should be acquired by transponder or GPS data. Mobile apps are acceptable. Just need you to reputably prove it. Please include how time was acquired.
@@ -56,4 +56,3 @@ I want the same resource for EVs and would love to build a list of who is who in
 - Thank you, Google for the [free database](https://docs.google.com/spreadsheets/d/1eWu3GgVJO_mWu6g1xuEgTjM4p1x4gUh5rznC157VISA/edit?usp=sharing).
 - Rendered with [eleventy](https://www.11ty.dev/).
 - Styled by [TailwindCSS](https://tailwindcss.com/).
-
