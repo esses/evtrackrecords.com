@@ -3,7 +3,7 @@ title: EV Track Records ⚡ evtrackrecords.com
 layout: default.njk
 ---
 <ul role="list" class="space-y-3">
-    <li class="bg-white shadow overflow-hidden rounded-md px-6 py-4">
+  <li class="bg-white shadow overflow-hidden rounded-md px-6 py-4">
     <h2 class="text-xl font-bold mb-4">Atlanta Motorsports Park - Dawsonville, GA</h2>
     <div class="flex flex-col">
       <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -16,13 +16,61 @@ layout: default.njk
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>    
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
                 </tr>
               </thead>
               <tbody>
                 {% for lap, val in tracks.amp %}
+                <tr>{% lapEntry val %}</tr>
+                {% endfor %}               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="bg-white shadow overflow-hidden rounded-md px-6 py-4">
+    <h2 class="text-xl font-bold mb-4">Buttonwillow Raceway - Buttonwillow, CA</h2>
+    <div class="flex flex-col">
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <h3 class="text-l font-bold mb-4">13 CW</h3>
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Driver</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lap, val in tracks.buttonwillow_13cw %}
+                <tr>{% lapEntry val %}</tr>
+                {% endfor %}               
+              </tbody>
+            </table>
+          </div>
+          <h3 class="text-l font-bold my-4">25A CW</h3>
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Driver</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lap, val in tracks.buttonwillow_25acw %}
                 <tr>{% lapEntry val %}</tr>
                 {% endfor %}               
               </tbody>
@@ -45,7 +93,6 @@ layout: default.njk
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>    
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
                 </tr>
@@ -114,7 +161,6 @@ layout: default.njk
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>    
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
                 </tr>
@@ -135,6 +181,7 @@ layout: default.njk
     <div class="flex flex-col">
       <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <h3 class="text-l font-bold mb-4">Full Course - "Long Circuit"</h3>
           <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table class="min-w-full divide-y divide-gray-200">
               <thead class="bg-gray-50">
@@ -143,13 +190,32 @@ layout: default.njk
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>    
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
                 </tr>
               </thead>
               <tbody>
                 {% for lap, val in tracks.sonoma %}
+                <tr>{% lapEntry val %}</tr>
+                {% endfor %}               
+              </tbody>
+            </table>
+          </div>
+          <h3 class="text-l font-bold my-4">"Holley High Voltage" - WTCC Circuit with Middle Hairpin T11</h3>
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Driver</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lap, val in tracks.sonoma_hhv %}
                 <tr>{% lapEntry val %}</tr>
                 {% endfor %}               
               </tbody>
@@ -172,7 +238,6 @@ layout: default.njk
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>    
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
                 </tr>
@@ -201,13 +266,81 @@ layout: default.njk
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Data</th>    
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
                   <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
                 </tr>
               </thead>
               <tbody>
                 {% for lap, val in tracks.laguna_seca %}
+                <tr>{% lapEntry val %}</tr>
+                {% endfor %}               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+    <li class="bg-white shadow overflow-hidden rounded-md px-6 py-4">
+    <h2 class="text-xl font-bold mb-4">Willow Springs International Raceway - Rosamond, CA</h2>
+    <div class="flex flex-col">
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <h3 class="text-l font-bold mb-4">Horse Thief Mile</h3>
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Driver</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lap, val in tracks.willow_springs.horse_thief_mile %}
+                <tr>{% lapEntry val %}</tr>
+                {% endfor %}               
+              </tbody>
+            </table>
+          </div>
+          <h3 class="text-l font-bold my-4">Streets of Willow CCW</h3>
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Driver</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lap, val in tracks.willow_springs.sow_ccw %}
+                <tr>{% lapEntry val %}</tr>
+                {% endfor %}               
+              </tbody>
+            </table>
+          </div>
+          <h3 class="text-l font-bold my-4">Streets of Willow CW</h3>
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Driver</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lap, val in tracks.willow_springs.sow_cw %}
                 <tr>{% lapEntry val %}</tr>
                 {% endfor %}               
               </tbody>
