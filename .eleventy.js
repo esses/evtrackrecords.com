@@ -34,7 +34,7 @@ module.exports = function(eleventyConfig) {
     }
 
     if (lap.Event) {
-      lapEvent = `${lap.Event}`;
+      lapEvent = `<div class="text-gray-500 text-xs">${lap.Event}</div>`;
     } else { 
       lapEvent = "";
     }
@@ -47,7 +47,7 @@ module.exports = function(eleventyConfig) {
 
     // TODO: there has to be a more elegant way of doing this
 
-    return `${driverString}<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${lap.LapTime}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${lap.Date}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono"><div>${lap.Vehicle}</div>${lapCarName}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${lapDataLink}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${lapVideoLink}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${lapEvent}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${modificationsLink}</td>`;
+    return `${driverString}<td class="text-center px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${lap.LapTime}</td><td class="text-center px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono"><div>${lap.Date}</div>${lapEvent}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono"><div>${lap.Vehicle}</div>${lapCarName}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${lapDataLink}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${lapVideoLink}</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 font-mono">${modificationsLink}</td>`;
   });
 
   // Nunjucks Lap Time Shortcode.

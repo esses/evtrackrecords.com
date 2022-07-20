@@ -4,7 +4,11 @@ module.exports = {
     fontFamily: {
       'sans': ['Montserrat','Helvetica', 'Arial', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        'shmedium': '.93rem',
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),
