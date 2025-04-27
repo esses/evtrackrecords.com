@@ -50,7 +50,7 @@ module.exports = function(eleventyConfig) {
   });
 
   // Nunjucks Lap Time Shortcode.
-  eleventyConfig.addNunjucksGlobal("year", "2022");
+  eleventyConfig.addNunjucksGlobal("year", "2025");
   return {
     dir: {
       input: "src",
