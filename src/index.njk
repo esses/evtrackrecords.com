@@ -104,6 +104,26 @@ layout: default.njk
               </tbody>
             </table>
           </div>
+        <h3 class="text-l font-bold my-4">Circuit</h3>
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Driver</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Time</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Lap Video</th>                          
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Build Thread / Mod List</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lap, val in tracks.buttonwillow_circuit %}
+                <tr>{% lapEntry val %}</tr>
+                {% endfor %}               
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
