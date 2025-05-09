@@ -2,7 +2,7 @@ Driver: Morgan Higham
 Track and Configuration: Adams Motorsports Park
 LapTime: 0:42.51
 Date: Jul 02, 2021
-Vehicle: Tesla Model 3 Performance 
+Vehicle: Tesla Model 3 Performance
 CarName: Midnight Kraken
 LapData: https://i.imgur.com/AtBvAqq.jpg
 LapVideo: https://youtu.be/_ATU_CnUvzQ
@@ -10,3 +10,5 @@ Event:
 ModList:
 InstagramUsername: midnight.kraken
 PhotoLink:
+Tire: Bridgestone RE71R 265/35R19
+Wheel:
