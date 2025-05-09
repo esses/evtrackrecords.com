@@ -1,8 +1,8 @@
 Driver: Samantha
 Track and Configuration: Thunderhill West
-LapTime: 1:27
+LapTime: 1:27.00
 Date: Oct 28, 2023
-Vehicle: Tesla Model 3 Dual Motor
+Vehicle: Tesla Model 3 Long Range
 CarName:
 LapData: 
 LapVideo: 
@@ -10,3 +10,5 @@ Event:
 ModList: 
 InstagramUsername: LadydrivenM3
 PhotoLink: 
+Tire: Toyo RA1 275/35R18 
+Wheel: Advan TC-4

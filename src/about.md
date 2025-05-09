@@ -15,7 +15,7 @@ title: About
 
 1. The most efficient way to submit a track record is through this [Google form](https://forms.gle/sTfyUc7Ubnn4XPyM6).
 2. For internet points you can also submit via the Facebook group [EV Track Records](https://www.facebook.com/groups/1635756253489735). See the info requirements below to submit with your post.
-3. If neither of those work for you or if your track record is not getting posted to the site fast enough for your liking, please email me at [steven@emotive.engineering](mailto:steven@emotive.engineering).
+3. If neither of those work for you or if your track record is not getting posted to the site fast enough for your liking, please email Alex [alextanka99@gmail.com](mailto:alextanaka99@gmail.com) or Steven [steven@emotive.engineering](mailto:steven@emotive.engineering).
 4. Ok, true nerd friends. Submit a [pull request on GitHub](https://github.com/esses/evtrackrecords.com/tree/main/src/_data/tracks).
 
 ---
@@ -36,8 +36,9 @@ Please include the following data. Those marked with * are optional.
 - Data Link:
     - Timing and scoring sheets from event organizers are perfect. All times should be acquired by transponder or GPS data. Mobile apps are acceptable. Just need you to reputably prove it. Please include how time was acquired.
 - Video Link:*
+    - Highly reccomended to submit video so we can all watch your lap! Preferably a public Youtube video
 - Competition Class:*
-    Time Attack Class when set, if applicable. ex: Enthusiast, SLB 2021
+    - Time Attack Class when set, if applicable. ex: Enthusiast, SLB 2021
 - Instagram Username:*
 - Photo Link:*
 - Build Thread or Mod List:*

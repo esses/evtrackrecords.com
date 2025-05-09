@@ -2,7 +2,7 @@ Driver: Craig Coker
 Track and Configuration: Buttonwillow 25A CW
 LapTime: 1:55.729
 Date: Jan 08, 2022
-Vehicle: 2018 Tesla Model 3 Performance
+Vehicle: Tesla Model 3 Performance
 CarName: FromWhereICharge Model 3
 LapData: https://drivenasa.com/wp-content/uploads/results/NASA_California-Southern_Region/2022-Official-Results/January-Buttonwillow-Official-Results/January-8-TT-Final-Results.pdf
 LapVideo: https://youtu.be/CEvLwgKHK0U
@@ -10,3 +10,5 @@ Event: NASA TTU
 ModList: 
 InstagramUsername: fromwhereicharge
 PhotoLink: 
+Tire: Yokohama A005 Slick 300/690R19 
+Wheel: Unplugged UP-03 18x10.5

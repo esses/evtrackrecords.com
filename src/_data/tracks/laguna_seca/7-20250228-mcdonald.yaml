@@ -2,7 +2,7 @@ Driver: Jacob McDonald
 Track and Configuration: WeatherTech Raceway Laguna Seca
 LapTime: 1:42.03
 Date: Feb 28, 2025
-Vehicle: 2022 Tesla Model 3 Performance 
+Vehicle: Tesla Model 3 Performance 
 CarName: Blackandspoild
 LapData: https://youtu.be/CUsLU7lxwFk
 LapVideo: https://youtu.be/CUsLU7lxwFk
@@ -10,3 +10,5 @@ Event:
 ModList: 
 InstagramUsername: blackandspoild
 PhotoLink: 
+Tire: Nankang CRS V2 305/30R20
+Wheel: Apex VS-5RS 20x12
